@@ -21,7 +21,26 @@ keyInObjectArray(objArray, 'animal'); // => false
 
 function keyInObjectArray(objArray, keyString) {
   // Your code here
+  let result = false;
+  objArray.forEach(function (obj) {
+    if (obj[keyString] != undefined) {
+      result = true
+    }
+  });
+  return result;
 }
+/*
+let objArray = [
+  { name: "Rupert" },
+  { age: 42 },
+  { planet: "Earth", system: "Milky Way" }
+];
+
+console.log(keyInObjectArray(objArray, 'planet')); // => true
+console.log(keyInObjectArray(objArray, 'age')); // => true
+console.log(keyInObjectArray(objArray, 'food')); // => false
+console.log(keyInObjectArray(objArray, 'animal')); // => false
+*/
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyInObjectArray;
