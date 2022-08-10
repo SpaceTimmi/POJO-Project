@@ -11,7 +11,14 @@ restSum(0); // => 0
 
 function restSum(...otherNums) {
   // Your code here
+  let sum = otherNums.reduce(function (acc, value) {
+    return (acc + value)
+  });
+  return sum
 }
 
+restSum(3,5,6); // => 14
+restSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
+restSum(0); // => 0
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = restSum;
